@@ -1,12 +1,12 @@
 const express = require('express');
 const path = require('path');
 const app = express();
-const PUERTO = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.static("public")); //Se utiliza para obtener archivos estaticos como pueden ser imagenes o estilos, a traves de una ruta especifica.
 
-app.listen(PUERTO, () => {
-    console.log(`El servidor está escuchando en el puerto ${PUERTO}...`);
+app.listen(port, () => {
+    console.log(`El servidor está escuchando en el puerto ${port}...`);
 });
 
 // HOME
