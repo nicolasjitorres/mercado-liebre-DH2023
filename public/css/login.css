@@ -1,0 +1,359 @@
+/* Colores:
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+Tipografia: Roboto
+
+Tamaños tipograficos:
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+
+*/
+
+/* CONFIGURACION GENERAL */
+
+
+/* Para todo */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+
+
+/* Tamaño de fuentes */
+
+/* Titulos */
+h3 {
+  font-size: 24px;
+}
+
+/* Precios y descripciones */
+h4,
+.producto span {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Descuentos */
+.producto p {
+  font-size: 16px;
+}
+
+/* Color de fondo del body */
+body {
+  background-color: #ebebeb;
+}
+
+
+
+
+
+
+/* HEADER */
+
+header {
+  background-color: #eac926;
+}
+
+/* Contenedor del header posicionado arriba */
+.header-div-arriba {
+  padding: 10px 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo mercadoliebre*/
+.logo-mercado-liebre {
+  width: 49%;
+}
+
+/* Barra de busqueda */
+.barra-busqueda {
+  background-color: white;
+  color: #666;
+  padding: 7px 4px;
+  border-radius: 8px;
+  width: 49%;
+  font-size: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+/* Frase */
+.frase {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+/* Links de navegacion */
+.barra-navegacion {
+  display: none;
+}
+
+.barra-navegacion a {
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+
+/* Contenedor del menu hamburguesa */
+.burger-menu {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+/* Menu hamburguesa */
+.fa-bars {
+  display: block;
+  background-color: #1259c3;
+  color: white;
+  font-size: 5vw;
+  text-align: center;
+  width: 10%;
+  height: 10%;
+  border-radius: 20%;
+  border: 5px #1259c3 solid;
+  margin-bottom: 10px;
+  padding: 1% 0;
+}
+
+/* Imagen del banner */
+.banner-mercado-liebre {
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+}
+
+
+
+
+/* MAIN */
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.titulo {
+  text-align: center;
+  padding: 30px 0 10px;
+  color: #666;
+  width: 100%;
+}
+
+.ingreso {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.ingreso input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #c9c9c9;
+  margin: 20px 0;
+}
+
+
+button {
+  padding: 8px 0;
+  border: none;
+  background-color: #1259c3;
+  color: white;
+  border-radius: 5px;
+  font-size: 12px;
+  width: 100%;
+  margin: 40px 0;
+}
+
+
+
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: white;
+}
+
+/* Secciones en general */
+.footer-section {
+  margin: 0px 40px;
+}
+
+/* Iconos dentro de las secciones */
+.footer-icono {
+  color: #1259c3;
+  font-size: 2em;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+/* Pie de pagina */
+.copyright {
+  text-align: start;
+  color: #666;
+  padding: 50px 20px 20px;
+  font-size: 12px;
+}
+
+/* Textos o descripciones dentro de cada seccion */
+.footer-section p {
+  font-size: 12px;
+  margin: 0 20px;
+}
+
+
+
+
+
+/* ANIMACIONES Y TRANSICIONES */
+
+.boton-enviar:hover {
+  background-color: #0022AA;
+}
+
+.boton-enviar {
+  cursor: pointer;
+  transition: all 200ms;
+}
+
+.footer-icono:hover {
+  color: #0022AA;
+}
+
+.footer-icono{
+  transition: all 500ms;
+}
+
+
+
+
+
+/* BREAKPOINTS */
+
+
+/* Navegacion para tablets */
+@media (min-width: 361px) {
+
+  /* Se convierte en responsive las secciones de los productos, para que uno vaya debajo del otro */
+  .main-section-ultimaVisita,
+  .main-section-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Pone visible la barra de navegacion */
+  .barra-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 0;
+    font-size: 12px;
+  }
+
+  /* Estilo de las listas de la barra de navegacion */
+  .lista-izquierda,
+  .lista-derecha {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2px 0;
+  }
+
+  /* Deja de mostrar el menu de hamburguesa */
+  .burger-menu {
+    display: none;
+  }
+
+}
+
+@media (min-width: 500px) {
+
+  /* Acomoda el div superior del header */
+  .logo-mercado-liebre,
+  .barra-busqueda,
+  .frase {
+    width: 30%;
+  }
+
+  .frase {
+    padding: 0;
+  }
+
+  /* Estilo para la barra de navegacion */
+  .lista-izquierda {
+    justify-content: flex-start;
+    width: 50%;
+    padding-left: 5px;
+  }
+
+  .lista-derecha {
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 5px;
+  }
+
+  li {
+    padding: 0 2px;
+  }
+}
+
+
+
+
+
+/* Navegacion para desktop */
+@media (min-width: 769px) {
+
+  /* Estilo para la barra de navegacion */
+  .lista-izquierda {
+    padding-left: 30px;
+  }
+
+  .lista-derecha {
+    padding-right: 30px;
+  }
+
+  li {
+    padding: 0 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    width: 33%;
+    margin: 0;
+    padding: 0 40px;
+  }
+
+  .footer-section p {
+    margin: 0;
+  }
+}
+

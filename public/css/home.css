@@ -1,0 +1,528 @@
+/* Colores:
+Amarillo: #EAC926;
+Azul: #03264C;
+Celeste: #1259c3;
+Gris oscuro: #666;
+Gris claro: #ebebeb;
+Verde: #39b54a;
+
+Tipografia: Roboto
+
+Tamaños tipograficos:
+Cuerpos de texto: 12px
+Titulares (Basado en tu última visita/Ofertas): 24px
+Precios: 18px
+Descuentos: 16px
+Descripciones: 16px
+
+*/
+
+/* CONFIGURACION GENERAL */
+
+
+/* Para todo */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto;
+  box-sizing: border-box;
+}
+
+
+
+/* Tamaño de fuentes */
+
+/* Titulos */
+h3 {
+  font-size: 24px;
+}
+
+/* Precios y descripciones */
+h4,
+.producto span {
+  font-size: 16px;
+  margin: 0;
+}
+
+/* Descuentos */
+.producto p {
+  font-size: 16px;
+}
+
+/* Color de fondo del body */
+body {
+  background-color: #ebebeb;
+}
+
+
+
+
+/* HEADER */
+
+header {
+  background-color: #eac926;
+}
+
+/* Contenedor del header posicionado arriba */
+.header-div-arriba {
+  padding: 10px 10px 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo mercadoliebre*/
+.logo-mercado-liebre {
+  width: 49%;
+}
+
+/* Contenedor de barra de busqueda e icono */
+.barra-busqueda-icono {
+  position: relative;
+  width: 49%;
+}
+
+/* Barra de busqueda */
+.barra-busqueda {
+  background-color: white;
+  color: #666;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 0.7rem;
+  display: flex;
+  padding-right: 30px;
+}
+
+
+.icono-busqueda {
+  position: absolute;
+  right: 10px; 
+  top: 25%;
+  color: #666;
+}
+
+
+/* Frase */
+.frase {
+  text-align: center;
+  width: 100%;
+  padding-top: 20px;
+  font-size: 12px;
+}
+
+/* Links de navegacion */
+.barra-navegacion {
+  display: none;
+}
+
+.barra-navegacion a {
+  text-decoration: none;
+  color: black;
+  list-style: none;
+}
+
+
+/* Contenedor del menu hamburguesa */
+.burger-menu {
+  text-align: center;
+  padding-bottom: 5px;
+}
+
+/* Menu hamburguesa */
+.fa-bars {
+  display: block;
+  background-color: #1259c3;
+  color: white;
+  font-size: 5vw;
+  text-align: center;
+  width: 10%;
+  height: 10%;
+  border-radius: 20%;
+  border: 5px #1259c3 solid;
+  margin-bottom: 10px;
+  padding: 1% 0;
+}
+
+/* Imagen del banner */
+.banner-mercado-liebre {
+  width: 100%;
+  display: flex;
+  align-self: flex-end;
+}
+
+
+
+
+/* MAIN */
+
+main {
+  margin: auto;
+  width: 90%;
+  padding: 40px 0 80px;
+}
+
+/* Titulos */
+.main-titulo {
+  color: #666;
+  padding: 15px 0;
+  width: 100%;
+}
+
+/* Contenedor de los productos */
+.producto {
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Imagenes de los productos */
+.producto img {
+  width: 100%;
+}
+
+/* Contenedor donde se encuentra precio, descuento, icono del camion y descripcion */
+.contenedor-descripcion-producto {
+  position: relative;
+  display: flex;
+  border-top: 1px solid #ebebeb;
+  padding: 15px;
+  background-color: white;
+  flex-wrap: wrap;
+}
+
+/* Precio y descuento, respectivamente */
+.producto span {
+  width: 30%;
+}
+
+.producto p {
+  color: #39b54a;
+  width: 70%;
+  display: flex;
+  align-items: flex-start;
+  padding-top: 2px;
+}
+
+/* Icono del camion */
+.contenedor-descripcion-producto>.icono-delivery {
+  margin: 0;
+  color: #39b54a;
+  display: block;
+  font-size: 16px;
+  padding: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #39b54a;
+  background-color: #FFF;
+  border-radius: 50%;
+  position: absolute;
+  right: 20px;
+  top: -15px;
+}
+
+/* Descripcion del producto */
+.descripcion {
+  font-weight: normal;
+  font-size: 16px;
+  color: #666;
+  opacity: 0;
+}
+
+
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  background-color: white;
+}
+
+/* Secciones en general */
+.footer-section {
+  margin: 0px 40px;
+}
+
+/* Iconos dentro de las secciones */
+.footer-icono {
+  color: #1259c3;
+  font-size: 2em;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+/* Pie de pagina */
+.copyright {
+  text-align: start;
+  color: #666;
+  padding: 50px 20px 20px;
+  font-size: 12px;
+}
+
+/* Textos o descripciones dentro de cada seccion */
+.footer-section p {
+  font-size: 12px;
+  margin: 0 20px;
+}
+
+
+
+
+/* ANIMACIONES Y TRANSICIONES */
+
+.producto:hover {
+  box-shadow: 0px 0px 20px rgb(100, 100, 100);
+  z-index: 1;
+  transform: scale(1.1);
+}
+
+.producto:hover .descripcion {
+  opacity: 1;
+}
+
+.producto {
+  position: relative;
+  transition: all 500ms;
+  z-index: 0;
+}
+
+.producto .descripcion {
+  transition: all 500ms;
+}
+
+.icono-delivery:hover {
+  animation: rotacion-carrito 500ms ease-in-out infinite alternate;
+}
+
+.footer-icono:hover {
+  color: #0022AA;
+}
+
+.footer-icono {
+  transition: all 500ms;
+}
+
+
+@keyframes rotacion-carrito {
+  0% {
+    transform: rotate(0deg)
+  }
+
+  20% {
+    transform: rotate(-18deg)
+  }
+
+  40% {
+    transform: rotate(-36deg)
+  }
+
+  60% {
+    transform: rotate(-54deg)
+  }
+
+  80% {
+    transform: rotate(-72deg)
+  }
+
+  100% {
+    transform: rotate(-90deg)
+  }
+}
+
+
+
+
+
+
+/* BREAKPOINTS */
+
+
+/* Navegacion para tablets */
+@media (min-width: 361px) {
+
+  /* Se convierte en responsive las secciones de los productos, para que uno vaya debajo del otro */
+  .main-section-ultimaVisita,
+  .main-section-ofertas {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  /* Sombra en los bordes de los articulos y muestra dos articulos por linea*/
+  .producto {
+    width: 48%;
+  }
+
+  /* Propiedades para ajustar el precio, oferta y descripcion respectivamente */
+  .producto span {
+    font-size: 0.55rem;
+    display: flex;
+    align-items: center;
+  }
+
+  .producto p {
+    font-size: 0.50rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 1px;
+  }
+
+  .descripcion {
+    margin-top: 10px;
+    font-size: 0.55rem;
+  }
+
+  /* Pone visible la barra de navegacion */
+  .barra-navegacion {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 15px 0 0;
+    font-size: 12px;
+  }
+
+  /* Estilo de las listas de la barra de navegacion */
+  .lista-izquierda,
+  .lista-derecha {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    padding: 2px 0;
+  }
+
+  /* Deja de mostrar el menu de hamburguesa */
+  .burger-menu {
+    display: none;
+  }
+
+}
+
+@media (min-width: 500px) {
+
+  /* Acomoda el div superior del header */
+  .logo-mercado-liebre,
+  .barra-busqueda-icono,
+  .frase {
+    width: 30%;
+    font-size: 14px;
+  }
+
+  .barra-busqueda{
+    font-size: 14px;
+  }
+
+  .frase {
+    padding: 0;
+  }
+
+  /* Tamaño del precio, oferta y descripcion respectivamente */
+  .producto span {
+    font-size: 0.8rem;
+  }
+
+  .producto p {
+    font-size: 0.75rem;
+  }
+
+  .descripcion {
+    font-size: 0.8rem;
+  }
+
+  .lista-derecha {
+    font-size: 11.7px;
+  }
+
+  /* Estilo para la barra de navegacion */
+  .lista-izquierda {
+    justify-content: flex-start;
+    width: 50%;
+    padding-left: 5px;
+  }
+
+  .lista-derecha {
+    justify-content: flex-end;
+    width: 50%;
+    padding-right: 5px;
+  }
+
+  li {
+    padding: 0 2px;
+  }
+}
+
+
+
+
+
+/* Navegacion para desktop */
+@media (min-width: 769px) {
+
+  /* Muestra 4 articulos por linea */
+  .producto {
+    width: 24%;
+  }
+
+  /* Tamaño del precio, oferta y descripcion respectivamente */
+  .producto span {
+    font-size: 0.6rem;
+  }
+
+  .producto p {
+    font-size: 0.55rem;
+  }
+
+  .descripcion {
+    font-size: 0.6rem;
+  }
+
+  /* Estilo para la barra de navegacion */
+  .lista-izquierda {
+    padding-left: 30px;
+  }
+
+  .lista-derecha {
+    padding-right: 30px;
+  }
+
+  li {
+    padding: 0 10px;
+  }
+
+  footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .footer-section {
+    width: 33%;
+    margin: 0;
+    padding: 0 40px;
+  }
+
+  .footer-section p {
+    margin: 0;
+  }
+
+}
+
+
+
+@media (min-width: 1100px) {
+
+  /* Tamaño del precio, oferta y descripcion respectivamente */
+  .producto span {
+    font-size: 0.94rem;
+  }
+
+  .producto p {
+    font-size: 0.9rem;
+  }
+
+  .descripcion {
+    font-size: 1rem;
+  }
+
+}
